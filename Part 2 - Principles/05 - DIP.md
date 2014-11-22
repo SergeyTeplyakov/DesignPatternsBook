@@ -102,7 +102,7 @@ TODO: пример для затравки. Еще подумаю над ним!
 Название принципа отражает нетипичность направления зависимостей: классы нижнего уровня определяют некоторый "контракт", которому должны следовать классы верхнего уровня. Классы верхнего уровня вынуждены выступать в роли "адаптеров" и подстраиваться под протокол, определенный на уровне ниже. При этом вместо "слаботипизированных" наблюдателей, текущий класс выделяет именованную зависимость в виде интерфейса, и требует ее в своем конструкторе от вышестоящего кода.
 
 ```csharp
-// Reporter.dll
+// Reporter.dll - Нижний уровень
 public interface IReportFormatter
 {
   string FormatReport(Report report);
@@ -127,8 +127,8 @@ public class Reporter
   {}
 }
 
-// Application.dll
-class XlsFormatter : IRepotFormatter
+// Application.dll - Верхний уровень
+class XlsFormatter : IReportFormatter
 {
   public string FormatReport(Report report)
   {
@@ -141,7 +141,7 @@ class Application
   public void Run()
   {
     var reporter = new Reporter(new XlsFormatter());
-    report.SendReport(GenerateReport());
+    reporter.SendReport(GenerateReport());
   }
 }
 
