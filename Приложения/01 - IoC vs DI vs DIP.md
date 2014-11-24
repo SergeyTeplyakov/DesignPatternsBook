@@ -14,7 +14,7 @@
  
 Простой метод обратного вызова или любая другая форма паттерна Наблюдатель является примером инверсии. Зная значение понятия IoC становится ясно, что такое понятие как IoC-контейнер лишено смысла, если только данный «контейнер» не предназначен для упрощения создания фрейморков.
 
-[Image0](https://github.com/SergeyTeplyakov/DesignPatternsBook/raw/master/%D0%9F%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/Images/01_Image1.png)
+![Image0](https://github.com/SergeyTeplyakov/DesignPatternsBook/raw/master/%D0%9F%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/Images/01_Image1.png)
 
 ## Dependency Injection (DI)
 Внедрение зависимостей (DI, Dependency Injection) – это механизм передачи классу его зависимостей. Существует несколько конкретных видов или паттернов внедрения зависимостей: внедрение зависимости через конструктор ([Constructor Injection](http://sergeyteplyakov.blogspot.com/2012/12/di-constructor-injection.html)), через метод ([Method Injection](http://sergeyteplyakov.blogspot.com/2013/02/di-method-injection.html)) и через свойство ([Property Injection](http://sergeyteplyakov.blogspot.com/2013/01/di-property-injection.html)).
