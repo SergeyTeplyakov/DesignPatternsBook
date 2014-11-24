@@ -77,7 +77,12 @@ class ReportProcessor
 
 В результате, в данном примере используется внедрение зависимостей (DI), но данный код не следует принципу инверсии зависимостями (DIP).
 
+Подведем итоги.
+
+Инверсия управления (IoC) говорит об изменении потока исполнения, присуща фреймворкам и функциям обратного вызова и не имеет никакого отношения к управлению зависимостями. Передача зависимостей (DI) - это инструмент передачи классу его зависимости через конструктор, метод или свойство. Принцип инверсии зависимостей (DIP) - это принцип проектирования, который говорит, что классы должны зависеть от высокоуровнвевых абстракций.
+
 ## Дополнительные ссылки
+* [Принцип инверсии зависимостей](http://sergeyteplyakov.blogspot.ca/2014/09/the-dependency-inversion-principle.html)
 * [DI Паттерны: Constructor Injection](http://sergeyteplyakov.blogspot.com/2012/12/di-constructor-injection.html))
 * [DI Паттерны: Method Injection](http://sergeyteplyakov.blogspot.com/2013/02/di-method-injection.html)
 * [DI Паттерны: Property Injection](http://sergeyteplyakov.blogspot.com/2013/01/di-property-injection.html)
