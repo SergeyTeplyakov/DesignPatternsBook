@@ -62,13 +62,14 @@ class ReportProcessor
     {
       _socket = socket;
     }
+
   public void SendReport(Report report, IStringBuilder stringBuilder)
   {
     stringBuilder.AppendFormat(CreateHeader(report));
     stringBuilder.AppendFormat(CreateBody(report));
     stringBuilder.AppendFormat(CreateFooter(report));
-    socket.Connect();
-    socket.Send(ConvertToByteArray(stringBuilder));
+    _socket.Connect();
+    _socket.Send(ConvertToByteArray(stringBuilder));
   }
 }
 ```
@@ -79,7 +80,7 @@ class ReportProcessor
 
 Подведем итоги.
 
-Инверсия управления (IoC) говорит об изменении потока исполнения, присуща фреймворкам и функциям обратного вызова и не имеет никакого отношения к управлению зависимостями. Передача зависимостей (DI) - это инструмент передачи классу его зависимости через конструктор, метод или свойство. Принцип инверсии зависимостей (DIP) - это принцип проектирования, который говорит, что классы должны зависеть от высокоуровнвевых абстракций.
+Инверсия управления (IoC) говорит об изменении потока исполнения, присуща фреймворкам и функциям обратного вызова и не имеет никакого отношения к управлению зависимостями. Передача зависимостей (DI) - это инструмент передачи классу его зависимости через конструктор, метод или свойство. Принцип инверсии зависимостей (DIP) - это принцип проектирования, который говорит, что классы должны зависеть от высокоуровневых абстракций.
 
 ## Дополнительные ссылки
 * [Принцип инверсии зависимостей](http://sergeyteplyakov.blogspot.ca/2014/09/the-dependency-inversion-principle.html)
