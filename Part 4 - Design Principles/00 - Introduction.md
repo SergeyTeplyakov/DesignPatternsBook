@@ -52,7 +52,7 @@
 ### Уровни владения принципами проектирования
 TODO: найти такую же картинку, но с copywritами.
 
-![Su Ha Ri](https://github.com/SergeyTeplyakov/DesignPatternsBook/raw/master/Part%202%20-%20Principles/Images/00_Introduction_Image_1.jpg )
+![Su Ha Ri](https://github.com/SergeyTeplyakov/DesignPatternsBook/raw/master/Part%204%20-%20Design%20Principles/Images/00_Introduction_Image_1.jpg )
 
 Разработчик за свою профессиональную карьеру проходит несколько стадий владения таким инструментом, как принципы проектирования.
 

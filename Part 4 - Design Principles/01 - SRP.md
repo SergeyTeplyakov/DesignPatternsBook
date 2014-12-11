@@ -98,7 +98,7 @@ public abstract class ContextActionBase
 
 Потом появилась дополнительная логика для работы с интерфейсами и абстрактными классами. Класс `AddRequiresContextAction` начал усложняться и граф вызовов его внутренних методов стал выглядеть так:
 
-![Requires Internals](https://github.com/SergeyTeplyakov/DesignPatternsBook/raw/master/Part%202%20-%20Principles/Images/ch01_Image1.jpg "Requires Internals")
+![Requires Internals](https://github.com/SergeyTeplyakov/DesignPatternsBook/raw/master/Part%204%20-%20Design%20Principles/Images/ch01_Image1.jpg "Requires Internals")
 
 Даже по рисунку видно, что у класса появилось две ярко выраженные обязанности: проверка допустимости действия и его исполнение, которые не были столь очевидны до этого. В результате, я выделил два дополнительных класса: `AddRequiesAvailability` и `AddRequiresExecutor`, которые стали отвечать за «доступность» действия и за его «выполнение». Со временем даже эти два класса были разбиты на более мелкие составляющие, поскольку потребовалось учитывать еще и особенности свойств языка C#, и один простой класс "вырос" в граф взаимодействующих объектов (*):
 
